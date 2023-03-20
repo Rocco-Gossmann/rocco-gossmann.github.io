@@ -62,8 +62,8 @@ n.addEventListener("install", (a) => {
       b.map(async (l) => {
         try {
           await s.add(l);
-        } catch {
-          console.error("failed to fetch ", l);
+        } catch(err) {
+          console.error("failed to fetch ", l, err);
         }
       }), t(null);
     })).then(() => n.skipWaiting())
