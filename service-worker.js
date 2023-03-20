@@ -60,6 +60,7 @@ n.addEventListener("install", (a) => {
   a.waitUntil(
     caches.open(o).then((s) => new Promise((t, r) => {
       b.map(async (l) => {
+        console.log("sw log", l);
         try {
           await s.add(l);
         } catch(err) {
