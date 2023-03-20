@@ -1,7 +1,7 @@
 const e = /* @__PURE__ */ location.pathname.split("/").slice(0, -1).join("/"), i = [
-  e + "/_app/immutable/entry/app.1ba919fe.js",
+  e + "/_app/immutable/entry/app.8eebed1c.js",
   e + "/_app/immutable/chunks/0.e773bb1c.js",
-  e + "/_app/immutable/chunks/1.cf901636.js",
+  e + "/_app/immutable/chunks/1.5c371f7d.js",
   e + "/_app/immutable/chunks/2.2e6b6afb.js",
   e + "/_app/immutable/chunks/3.6b7ce07e.js",
   e + "/_app/immutable/chunks/4.646c24a0.js",
@@ -14,9 +14,9 @@ const e = /* @__PURE__ */ location.pathname.split("/").slice(0, -1).join("/"), i
   e + "/_app/immutable/chunks/control.e7f5239e.js",
   e + "/_app/immutable/chunks/index.1de1fe79.js",
   e + "/_app/immutable/chunks/index.3a8ffb59.js",
-  e + "/_app/immutable/chunks/singletons.099898c2.js",
-  e + "/_app/immutable/entry/start.64501b65.js",
-  e + "/_app/immutable/entry/error.svelte.7bd2d3c5.js",
+  e + "/_app/immutable/chunks/singletons.7a867ec8.js",
+  e + "/_app/immutable/entry/start.7c42707e.js",
+  e + "/_app/immutable/entry/error.svelte.c8198bc7.js",
   e + "/_app/immutable/entry/layout.svelte.1105875f.js",
   e + "/_app/immutable/entry/_layout.js.984db11e.js",
   e + "/_app/immutable/entry/_page.svelte.e94dc93f.js",
@@ -27,7 +27,8 @@ const e = /* @__PURE__ */ location.pathname.split("/").slice(0, -1).join("/"), i
   e + "/_app/immutable/entry/_lang_lang_-index.html-layout.ts.ed4e5b64.js",
   e + "/_app/immutable/entry/_lang_lang_-index.html-page.svelte.5269d22d.js",
   e + "/_app/immutable/entry/_lang_lang_-index.html-page.ts.ba358d8b.js"
-], m = [
+], c = [
+  e + "/.nojekyll",
   e + "/favicon.png",
   e + "/lib/noscrollbars/noscrollbars.css",
   e + "/lib/noscrollbars/noscrollbars.js",
@@ -40,31 +41,30 @@ const e = /* @__PURE__ */ location.pathname.split("/").slice(0, -1).join("/"), i
   e + "/lib/vendor/fontawesome/webfonts/fa-solid-900.woff2",
   e + "/lib/vendor/fontawesome/webfonts/fa-v4compatibility.ttf",
   e + "/lib/vendor/fontawesome/webfonts/fa-v4compatibility.woff2"
-], c = [
+], m = [
   e + "/",
   e + "/de",
   e + "/en",
   e + "/de/index.html",
   e + "/en/index.html"
-], p = "1679284493695", n = self, o = `appcache-${p}`, b = [
+], p = "1679285544395", n = self, o = `appcache-${p}`, b = [
   "/index.html",
   /* Index page */
   ...i,
   /* compiled assets */
-  ...m.filter((a) => !a.match(/\/\./)),
+  ...c.filter((a) => !a.match(/\/\./)),
   /* static files (except files hidden by Apache) */
-  ...c
+  ...m
   /* pages */
 ];
 n.addEventListener("install", (a) => {
   a.waitUntil(
     caches.open(o).then((s) => new Promise((t, r) => {
       b.map(async (l) => {
-        console.log("sw log", l);
         try {
           await s.add(l);
-        } catch(err) {
-          console.error("failed to fetch ", l, err);
+        } catch {
+          console.error("failed to fetch ", l);
         }
       }), t(null);
     })).then(() => n.skipWaiting())
