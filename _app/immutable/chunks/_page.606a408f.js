@@ -1,1 +1,0 @@
-const e=new Map;e.set("de",{site_coming_soon:"Hier entsteht bald eine neuen Webseite.",meta_keywords:""});e.set("en",{site_coming_soon:"New Website comming soon.",meta_keywords:""});const o=({params:t})=>({texts:e.get(t.lang)||e.get("de")}),n=Object.freeze(Object.defineProperty({__proto__:null,load:o},Symbol.toStringTag,{value:"Module"}));export{n as _,o as l};

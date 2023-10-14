@@ -1,33 +1,33 @@
-const e = /* @__PURE__ */ location.pathname.split("/").slice(0, -1).join("/"), i = [
-  e + "/_app/immutable/entry/app.90108895.js",
-  e + "/_app/immutable/chunks/0.e773bb1c.js",
-  e + "/_app/immutable/chunks/1.73149f02.js",
-  e + "/_app/immutable/chunks/2.cfcfffea.js",
-  e + "/_app/immutable/chunks/3.6b7ce07e.js",
+const e = /* @__PURE__ */ location.pathname.split("/").slice(0, -1).join("/"), o = [
+  e + "/_app/immutable/entry/app.d8201eed.js",
+  e + "/_app/immutable/chunks/0.f7d7bfaf.js",
+  e + "/_app/immutable/chunks/1.021eca25.js",
+  e + "/_app/immutable/chunks/2.c9437896.js",
+  e + "/_app/immutable/chunks/3.5b5587e7.js",
   e + "/_app/immutable/chunks/4.646c24a0.js",
-  e + "/_app/immutable/chunks/5.667d884d.js",
+  e + "/_app/immutable/chunks/5.3273582a.js",
   e + "/_app/immutable/chunks/_layout.8b28430a.js",
   e + "/_app/immutable/chunks/_layout.da46b06b.js",
   e + "/_app/immutable/chunks/_page.5b67d867.js",
-  e + "/_app/immutable/chunks/_page.606a408f.js",
   e + "/_app/immutable/chunks/_page.eb161e18.js",
   e + "/_app/immutable/chunks/control.e7f5239e.js",
   e + "/_app/immutable/chunks/index.1de1fe79.js",
-  e + "/_app/immutable/chunks/index.3a8ffb59.js",
-  e + "/_app/immutable/chunks/singletons.85ed6ee4.js",
-  e + "/_app/immutable/entry/start.8cfc9499.js",
-  e + "/_app/immutable/entry/error.svelte.25a8417a.js",
-  e + "/_app/immutable/entry/layout.svelte.1105875f.js",
+  e + "/_app/immutable/chunks/index.58a3aa90.js",
+  e + "/_app/immutable/chunks/index.bae3f74a.js",
+  e + "/_app/immutable/chunks/singletons.7e0c89b0.js",
+  e + "/_app/immutable/entry/start.c3fb600b.js",
+  e + "/_app/immutable/entry/error.svelte.20d7b418.js",
+  e + "/_app/immutable/entry/layout.svelte.b04ab382.js",
+  e + "/_app/immutable/assets/profilepic.9e13f9c0.png",
   e + "/_app/immutable/entry/_layout.js.984db11e.js",
-  e + "/_app/immutable/entry/_page.svelte.e94dc93f.js",
+  e + "/_app/immutable/entry/_page.svelte.63bbb00e.js",
   e + "/_app/immutable/entry/_page.ts.dc4c779e.js",
   e + "/_app/immutable/entry/_lang_lang_-page.ts.4648614a.js",
-  e + "/_app/immutable/assets/_layout.19e73e8d.css",
-  e + "/_app/immutable/entry/_lang_lang_-index.html-layout.svelte.d7279a62.js",
+  e + "/_app/immutable/assets/_layout.c896caae.css",
+  e + "/_app/immutable/entry/_lang_lang_-index.html-layout.svelte.823bb396.js",
   e + "/_app/immutable/entry/_lang_lang_-index.html-layout.ts.ed4e5b64.js",
-  e + "/_app/immutable/assets/_page.376b2f95.css",
-  e + "/_app/immutable/entry/_lang_lang_-index.html-page.svelte.cbd37dd3.js",
-  e + "/_app/immutable/entry/_lang_lang_-index.html-page.ts.67f45457.js"
+  e + "/_app/immutable/assets/_page.73aff319.css",
+  e + "/_app/immutable/entry/_lang_lang_-index.html-page.svelte.7c6a371a.js"
 ], m = [
   e + "/.nojekyll",
   e + "/favicon.png",
@@ -48,10 +48,10 @@ const e = /* @__PURE__ */ location.pathname.split("/").slice(0, -1).join("/"), i
   e + "/en",
   e + "/de/index.html",
   e + "/en/index.html"
-], c = "1679456684048", n = self, o = `appcache-${c}`, b = [
+], c = "1697300226874", n = self, i = `appcache-${c}`, b = [
   "/index.html",
   /* Index page */
-  ...i,
+  ...o,
   /* compiled assets */
   ...m.filter((a) => !a.match(/\/\./)),
   /* static files (except files hidden by Apache) */
@@ -60,7 +60,7 @@ const e = /* @__PURE__ */ location.pathname.split("/").slice(0, -1).join("/"), i
 ];
 n.addEventListener("install", (a) => {
   a.waitUntil(
-    caches.open(o).then((s) => new Promise((t, r) => {
+    caches.open(i).then((s) => new Promise((t, r) => {
       b.map(async (l) => {
         try {
           await s.add(l);
@@ -75,7 +75,7 @@ n.addEventListener("activate", (a) => {
   a.waitUntil(
     caches.keys().then(async (s) => {
       for (const t of s)
-        t !== o && await caches.delete(t);
+        t !== i && await caches.delete(t);
     })
   );
 });

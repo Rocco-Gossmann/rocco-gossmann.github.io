@@ -10,23 +10,79 @@
 		<link rel="stylesheet" type="text/css" href="/lib/noscrollbars/noscrollbars.css" />
 		<script type="text/javascript" src="/lib/noscrollbars/noscrollbars.js" defer></script>
 
+		<script type="text/javascript">
+
+			document.addEventListener("click", (ev) => {
+				if(ev.target.nodeName === "A") {
+					const link = ev.target;
+					const href = link.href;
+					const anchor = new URL(href).hash.replace('#', '')
+					console.log(link.dataset.scrolldelay);
+					const scrolldelay = parseInt(link.dataset.scrolldelay || '0');
+					let anchorElement
+					if(anchor && (anchorElement=document.getElementById(anchor))) {
+						ev.preventDefault();
+						window.setTimeout(() => {
+
+                            let el = anchorElement;
+                            let top = el?.offsetTop
+                            while (el.tagName !== "SECTION") {
+                                el = el.parentNode; 
+                                top += el?.offsetTop
+                            }
+
+							window?.app?.scrollTo({ top, behavior: 'smooth' })
+
+							history.pushState({}, "", href) 
+						}, scrolldelay)
+					}
+				}
+
+				return true;
+			})
+
+			window.addEventListener("hashchange", (ev) => {
+				console.log(ev);
+				const anchor = new URL(ev.newURL).hash.replace('#', '')
+
+				let anchorElement
+				if(anchor) {
+					if (!(anchorElement=document.getElementById(anchor))) return true;
+
+					ev.preventDefault();
+
+					window?.app?.scrollTo({
+						top: anchorElement?.offsetTop,
+						behavior: 'smooth'
+					})
+
+					history.pushState({}, "", link.href) 
+
+					return false;
+				}
+				else {
+					window?.app?.scrollTo({ top: 0, behavior: 'smooth' })
+				}
+			})
+
+		</script>
+
 		<meta http-equiv="content-security-policy" content="">
-		<link href="../_app/immutable/assets/_layout.19e73e8d.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/_page.376b2f95.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/entry/start.8cfc9499.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/index.3a8ffb59.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.85ed6ee4.js">
+		<link href="../_app/immutable/assets/_layout.c896caae.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/_page.73aff319.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.c3fb600b.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.bae3f74a.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.7e0c89b0.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/control.e7f5239e.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/app.90108895.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/layout.svelte.1105875f.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.d8201eed.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/layout.svelte.b04ab382.js">
 		<link rel="modulepreload" href="../_app/immutable/entry/_layout.js.984db11e.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/_layout.da46b06b.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/_lang_lang_-index.html-layout.svelte.d7279a62.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/_lang_lang_-index.html-layout.svelte.823bb396.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.58a3aa90.js">
 		<link rel="modulepreload" href="../_app/immutable/entry/_lang_lang_-index.html-layout.ts.ed4e5b64.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/_layout.8b28430a.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/_lang_lang_-index.html-page.svelte.cbd37dd3.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/_lang_lang_-index.html-page.ts.67f45457.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/_page.606a408f.js"><!-- HEAD_svelte-186ynp2_START --><meta name="keywords" content=""><!-- HEAD_svelte-186ynp2_END -->
+		<link rel="modulepreload" href="../_app/immutable/entry/_lang_lang_-index.html-page.svelte.7c6a371a.js"><!-- HEAD_svelte-emmyh7_START --><meta name="keywords" content=""><!-- HEAD_svelte-emmyh7_END -->
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div id="app" class="noscrollbars">
@@ -34,29 +90,248 @@
 
 <div aria-hidden="true" class="svelte-193nvbr"> </div>
 
-<main class="svelte-1wue5j2"><span style="grid-area: head"><nav class="appcontainer svelte-w27lku"><ul style="grid-area: line" class="line svelte-w27lku"><li class="svelte-w27lku"><h4 class="svelte-w27lku"><a href="/en/index.html" class="svelte-w27lku">Rocco Goßmann</a></h4></li></ul>
-  <ul style="grid-area: menu" class="menutoggle svelte-w27lku"><li class="svelte-w27lku"><h4 class="svelte-w27lku"><a href="#" class="svelte-w27lku"><span class="fa fa-bars svelte-w27lku"></span></a></h4></li></ul>
-  <ul style="grid-area: lang" class="svelte-w27lku"><li class="svelte-w27lku"><a href="/de" class="svelte-w27lku">DE</a> /
-      <a href="/en" class="svelte-w27lku">EN</a></li></ul>
+<main class="svelte-1wue5j2"><span style="grid-area: head"><nav class="appcontainer svelte-yrgy47"><ul style="grid-area: line" class="line svelte-yrgy47"><li class="svelte-yrgy47"><h2 class="svelte-yrgy47"><a href="/en/index.html" class="svelte-yrgy47">Rocco Goßmann</a></h2></li></ul>
+
+  <ul style="grid-area: menu" class="menutoggle svelte-yrgy47"><li class="svelte-yrgy47"><h2 class="svelte-yrgy47"><a href="#" class="svelte-yrgy47"><span class="fa fa-bars svelte-yrgy47"></span></a></h2></li></ul>
   
+  <ul style="grid-area: lang" class="svelte-yrgy47"><li class="svelte-yrgy47"><a href="/de" class="svelte-yrgy47">DE</a> /
+      <a href="/en" class="svelte-yrgy47">EN</a></li></ul>
 
-</nav></span> 
-    <span style="grid-area: navi" class="sidenav svelte-1wue5j2"><aside class="appcontainer"><nav><ul class="svelte-7mgov8"></ul>
-        <ul class="svelte-7mgov8"><li><b>Introduction:</b></li>
-            <li><ul class="svelte-7mgov8"><li>menu 1</li>
-                <li>menu 2</li></ul></li></ul>
+  </nav>
 
-        <ul class="svelte-7mgov8"><li><b>Education:</b></li>
-            <li><ul class="svelte-7mgov8"><li>menu 1</li>
-                <li>menu 2</li></ul></li></ul>
+</span> 
+    <span style="grid-area: navi" class="sidenav svelte-1wue5j2"><aside class="appcontainer svelte-1siqzod"><nav><ul class="svelte-1siqzod"></ul>
 
-        <ul class="svelte-7mgov8"><li><b>Projects:</b></li>
-            <li><ul class="svelte-7mgov8"><li>menu 1</li>
-                <li>menu 2</li></ul></li></ul></nav>
+        <ul class="svelte-1siqzod"><li><b>Introduction:</b></li>
+            <li><ul class="svelte-1siqzod"><li class="navlink svelte-1siqzod"><a data-scrolldelay="0" href="#aboutme">About me</a></li>
+                <li class="navlink svelte-1siqzod"><a data-scrolldelay="0" href="#hobbies">Hobbies</a></li>
+                <li class="navlink svelte-1siqzod"><a data-scrolldelay="0" href="#strengthweaknesses">Strength &amp; Weaknesses</a></li></ul></li></ul>
+
+        <ul class="svelte-1siqzod"><li><b>Career:</b></li>
+            <li><ul class="svelte-1siqzod"><li class="navlink svelte-1siqzod"><a data-scrolldelay="0" href="#job">Jobs &amp; Experience</a></li>
+                <li class="navlink svelte-1siqzod"><a data-scrolldelay="0" href="#cv">Curriculum vitae</a></li></ul></li></ul>
+
+        <ul class="svelte-1siqzod"><li><b>Miscellaneous:</b></li>
+            <li><ul class="svelte-1siqzod"><li class="navlink svelte-1siqzod"><a data-scrolldelay="0" href="#tools">My Tools</a></li>
+                <li class="navlink svelte-1siqzod"><a data-scrolldelay="0" href="#links">Links</a></li>
+                <li class="navlink svelte-1siqzod"><a data-scrolldelay="0" href="#legal">Legal notice</a></li></ul></li></ul>
+
+        <ul class="svelte-1siqzod"></ul></nav>
 </aside></span> 
     <span style="grid-area: main">
 
-<section class="appcontainer svelte-z1wc9"><p>New Website comming soon.</p>
+<section class="appcontainer text-section svelte-1n9dagx visible" id=""><img src="/_app/immutable/assets/profilepic.9e13f9c0.png" alt="passport pic (dummy)" class="svelte-n0bhgg">
+
+    <h3 id="aboutme">Who am I?</h3>
+
+    <!-- HTML_TAG_START -->
+            <p>Hello, my name is Rocco, but you probably guessed as much. I was born in 1987 and thus I am 36 years young.</p>
+
+            <h5> In addition to that I am: </h5>
+            <ul>
+                <li><span class="li-inline">1.83m tall</span></li> 
+                <li><span class="li-inline">of male gender</span></li>
+                <li><span class="li-inline">single</span></li>
+                <li><span class="li-inline">introverted</li>
+                <li><span class="li-inline">proud owner of a small house on the country sight</span></li>
+                <li><span class="li-inline">owner of a driver's license class B and fitting vehicle</span></li>
+            </ul>
+        <!-- HTML_TAG_END -->
+
+    <div style="clear: both"></div>
+</section>
+
+
+<section class="appcontainer text-section svelte-1n9dagx visible" id="hobbies"><h3>What do I do in my spare time?</h3>
+	<!-- HTML_TAG_START -->
+            <p>In my spare time, next to any domestic duties, I like to 
+               expand my knowledge about programming and software development.</p>
+
+            <p>Over the years I've tackled various projects in all kinds of areas in the programming space.<br />
+               The most obvious one being Web Development. Without that, this site would not exist.</p>
+
+            <p>But I'm also interessted in other programming languanges too.<br />
+               Basically from  Assembler (6052 and z80), over C/C++, Java, Go, Lua and of course JavaScript/Typescript, HTML, CSS, PHP und MySQL  everything is possible.</p>
+        <!-- HTML_TAG_END --> 
+
+	<div style="clear: both"></div>
+</section>
+
+<section class="appcontainer text-section svelte-1n9dagx visible" id="strengthweaknesses"><h3>Strength &amp; Weaknesses</h3>
+	<!-- HTML_TAG_START -->
+            <h5>Strength</h5>
+            <p>
+                Being able to see and utilized someone's strengths is important.<br />
+                My strengths are:
+            </p>
+            <ul>
+                <li class="li-border">Willingness to experiment.</li>
+                <li class="li-border">Analytical thinking.</li>
+                <li class="li-border">I have fun learning new things.</li>
+                <li class="li-border">The ability to quickly aquire new basic knowledge.</li>
+                <li class="li-border">A passion for programming and software development.</li>
+            </ul>
+
+            <h5>Weaknesses</h5>
+            <p>
+                As much, as I'd like to pretend I'm perfect. I'm not.<br />
+                Some of my biggest weaknesses are.
+            </p>
+            <ul>
+                <li class="li-border">Unease in crowds of people.</li>
+                <li class="li-border">Unconventional thinking</li>
+                <li class="li-border">Sometimes overthinking things</li>
+                <li class="li-border">The quick loss of concentration and easy distractibility</li>
+                <li class="li-border">slight dyslexia</li>
+                <li class="li-border">and because of all of that a relatively slow way of working.</li>
+            </ul>
+        <!-- HTML_TAG_END --> 
+
+	<div style="clear: both"></div>
+</section>
+
+<section class="appcontainer text-section svelte-1n9dagx visible" id="job"><h3>What was/is my job until now?</h3>
+	<!-- HTML_TAG_START -->
+            <p>
+                My learned occupation is "State-certified business economist specializing in business informatics".
+                I made my diploma in 2011.<br />
+                However, my strength lay more in the "informatics/computer science" part than the "business economics".
+            </p>
+            <p>
+                That is why I, since 2011, am employed as <b>Software developer and -programmer for WEB-based applications</b> (or <b>WEB developer</b> for short).<br />
+                The basics of "business economics" are still coming in handy sometimes.
+                For example, when developing applications for accounting and management.
+            </p>
+
+            <h5>Jobs I've done so far:</h5>
+            <ul>
+                 <li class="li-border"> Developing of <b>Apache+PHP+MySQL</b> (LAMP-Stack) based Front- und Backends.</li>
+                 <li class="li-border"> Building of <b>Progressiv WebApps</b> (<b>PWA</b>s for short) with focus on offline-availability.</li>
+                 <li class="li-border"> Development of Frontends using <b>native Javascript, HTML and CSS</b> as well as using Frameworks/Libraries like <b>Bootstrap, jQuery and Svelte/SvelteKit</b>.</li>
+                 <li class="li-border"> Advisory roles in planning of new Apps and Features.</li>
+                 <li class="li-border"> Maintenance and documentation of existing applications.</li>
+                 <li class="li-border"> Building of <b>REST-APIs</b> with focus on security. For example through <b>AES-encryption</b> and Tokens.</li>
+                 <br />
+                 <li class="li-border"> 
+                    Building of automated systems for Accounting and Finance<br />
+                        (creation of invoices, offers, receipts, etc. ...) 
+                 <br />
+                 <li class="li-border"> Building and maintainance of interactive applications for livestreaming via <b>Flash/ActionScript</b>
+                 <li class="li-border"> Building of interactive stream players for use in TV broadcasts. </li>
+                 <li class="li-border"> as well, as the required backend to influence the broadcast TV programm via Phone. <br />
+                    <small>(Since these applications fall partially into a none youth protected area, I'll not go into any further details, on this publicly available site here. 😅)</small>
+                 </li>
+            </ul>
+
+            <h5>I have experience in building/working with:</h5>
+            <ul>
+                <li class="li-border">Applications for time management:
+                    <ul>
+                        <li class="li-border">broadcasting schedules </li>
+                        <li class="li-border">shift schedules </li>
+                        <li class="li-border">scheduling in general</li>
+                        <li class="li-border">etc. ...</li>
+                    </ul>
+                </li>
+                <li class="li-border">
+                    Applications for task management. <br />
+                    with focus on realtime/timely communication and offline availability.
+                </li>
+                <li class="li-border">APIs for transferring documents and data. for Example.:
+                <ul>
+                    <li class="li-border"> processing the State of <a href="https://immobilienwirtschaft.vodafone.de/produkte/gebaeudekonnektivitaet/" target="_blank">"Gebäudekonnektivität 4.0"</a> - Sensors by Vodafone </li>
+                    <li class="li-border"> or transfering contract documents to <b>SAPERION</b>-Systems </li>
+                </ul>
+            </ul>
+        <!-- HTML_TAG_END --> 
+
+	<div style="clear: both"></div>
+</section>
+
+<section class="appcontainer text-section svelte-1n9dagx visible" id="cv"><h3>Curriculum vitae</h3>
+	<!-- HTML_TAG_START -->
+            <p>
+                From Aug. 2011 till Nov. 2020 I was hired by the <a href="https://www.rapidcomp.de/" target="_blank">RapidComp GmbH</a> in Berlin.<br />
+                Unfortunately, in 2020, the company had to lay off most of its workforce due to the measures taken by the government related to COVID-19.
+            </p>
+            <p>
+                Since Dec. 2020 I'm now part of the der GBA-Professional GmbH in Bernau. 
+                There, my colleagues and I develop and maintain the product
+                <a href="https://ivm-pro.de/" target="_blank">IVM-Professional / IVMPRO</a>, 
+                which is used throughout Germany as a "Customer Relationship Management"(short CRM) system for the housing market.
+            </p>
+            In general, my curriculum vitae looks like this:
+            <ul>
+                <li class="li-border"> <b> 1993 - 2003: </b> School </li>
+                <li class="li-border"> <b> 2005 - 2007: </b> Education/Training for "State certified commercial assistant" </li>
+                <li class="li-border"> <b> 2007 - 2010: </b> Education/Training for "State-certified business economist specializing in business informatics" </li>
+                <li class="li-border"> <b> 2011 - 2020: </b> Software-Developer and -programmer at the <a href="https://www.rapidcomp.de/" target="_blank">RapidComp GmbH</a> in Berlin</li>
+                <li class="li-border"> <b> 2020 - now: </b> Programmer at the <a href="https://ivm-pro.de/" target="_blank">IVM-Professional / IVMPRO</a> in Bernau</li>
+            </ul>
+        <!-- HTML_TAG_END --> 
+
+	<div style="clear: both"></div>
+</section>
+
+<section class="appcontainer text-section svelte-1n9dagx visible" id="tools"><h3>Tools I use for my Work</h3>
+	<!-- HTML_TAG_START -->
+            When it comes to tools, we programmers have a lot of choices. This list does not mean, I'm avert to using other or new tools.
+            In general, no tool is really good or bad. Each just has advantages and disadvantages.
+
+            <h5>Opperating Systems</h5>
+            <ul>
+                <li class="li-border">Windows</li>
+                <li class="li-border">Mac OS</li>
+                <li class="li-border">but more preferably Linux (Debian / Ubuntu / Linux Mint oder Fedora) </li>
+            </ul>
+
+            <h5>IDEs / Editors</h5>
+            <ul>
+                <li class="li-border">NuSphere PhpED</li>
+                <li class="li-border"><a href="https://www.jetbrains.com/de-de/phpstorm/" target="_blank">JetBrains PHPStorm / WebStorm</a></li>
+                <li class="li-border"><a href="https://visualstudio.microsoft.com/de/" target="_blank">Visual Studio (for C/C++ Development)</a></li>
+                <li class="li-border"><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
+                <li class="li-border">but more preferably, if possible <a href="https://github.com/neovim/neovim" target="_blank">NeoVim</a> + <a href="https://github.com/tmux/tmux/wiki" target="_blank">Tmux</a> with their respective configuration for autocompletion and debugging (see <a href="https://github.com/Rocco-Gossmann/nvChadConfig" target="_blank">My Vim Configuration</a>)
+            </ul>
+
+            <h5>Others</h5>
+            <ul>
+                <li class="li-border">GIT</li>
+                <li class="li-border">Microsoft Outlook / Office Word / Office Excel</li>
+                <li class="li-border">Thunderbird</li>
+                <li class="li-border">LibreOffice Writer / Calc </li>
+            </ul>
+
+            <h5>Hardware</h5>
+            <ul>
+                <li class="li-border">Asus ROG x13 Laptop (Linux + Window Dualboot)</li>
+                <li class="li-border">M1 Macbook Air</li>
+                <li class="li-border">iPad Pro 2020</li>
+                <li class="li-border">Galaxy Tab S7+</li>
+                <li class="li-border">Raspberry PI 400 as a NAS and VPN Server</li>
+            </ul>
+        <!-- HTML_TAG_END --> 
+
+	<div style="clear: both"></div>
+</section>
+
+<section class="appcontainer text-section svelte-1n9dagx visible" id="misc"><h3>Miscellaneous:</h3>
+	<h5 id="links">Misc. Links</h5>
+<!-- HTML_TAG_START -->
+            <ul>
+                <li class="li-border"><a href="https://github.com/rocco-gossmann" target="_blank">
+                    my GitHub
+                 </a></li>
+            </ul>
+        <!-- HTML_TAG_END -->
+
+	<div style="clear: both"></div>
+</section>
+
+<section class="appcontainer text-section svelte-1n9dagx visible" id="legal"><h3><a href="#">Legal notices</a></h3>
+	
+
+	<div style="clear: both"></div>
 </section></span>
 </main>
 
@@ -64,7 +339,7 @@
 			
 			<script>
 				{
-					__sveltekit_gaj5i5 = {
+					__sveltekit_1usz9xu = {
 						env: {},
 						base: new URL("..", location).pathname.slice(0, -1),
 						element: document.currentScript.parentElement
@@ -73,10 +348,10 @@
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../_app/immutable/entry/start.8cfc9499.js"),
-						import("../_app/immutable/entry/app.90108895.js")
+						import("../_app/immutable/entry/start.c3fb600b.js"),
+						import("../_app/immutable/entry/app.d8201eed.js")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_gaj5i5.element, {
+						kit.start(app, __sveltekit_1usz9xu.element, {
 							node_ids: [0, 2, 5],
 							data,
 							form: null,
