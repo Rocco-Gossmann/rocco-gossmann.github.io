@@ -92,7 +92,7 @@ import{X as w}from"./index.bae3f74a.js";function v(r){const n=r-1;return n*n*n+1
                Die Verwendung von Databases wie <b>SQLite</b>, <b>MongoDB</b> und <b>IndexedDB</b> stellt ebenfalls kein Problem dar.
             </p>
 
-            <p>Zusätzlich gehe ich immer davon aus, dass fehlendes Wissen gelernt werden kann</p>
+            <p>Zusätzlich gehe ich immer davon aus, dass fehlendes Wissen gelernt werden kann.</p>
         `,personalinfo_headline:"Stärken & Schwächen",personalinfo_text:`
             <h5>Stärken</h5>
             In der Lage zu sein jemandes Stärken zu sehen und zu nutzen ist wichtig.<br />
@@ -188,7 +188,7 @@ import{X as w}from"./index.bae3f74a.js";function v(r){const n=r-1;return n*n*n+1
               </li>
 
               <li class="li-border"><a href="https://rocco-gossmann.github.io/SvelteHelloWorldTodos/" target="_blank">Svelte Todo App</a><br>
-            <small>(quellcode hier: <a href="https://github.com/Rocco-Gossmann/SvelteHelloWorldTodos" target="_blank">https://github.com/Rocco-Gossmann/SvelteHelloWorldTodos</a>)<br><br>
+            <small>(quellcode hier: <a href="https://github.com/Rocco-Gossmann/SvelteHelloWorldTodos" target="_blank">https://github.com/Rocco-Gossmann/SvelteHelloWorldTodos</a>)</small><br><br>
 
                 Eine Java-/Typescript basierte Todo App, welche in Svelte gebaut wurde:
                 - Komplett offline fähig<br>
@@ -315,6 +315,8 @@ import{X as w}from"./index.bae3f74a.js";function v(r){const n=r-1;return n*n*n+1
                Basically from <b>C/C++</b>, <b>Java</b>, <b>Go/GoLang</b>, <b>Lua</b> and of course <b>JavaScript/Typescript</b>, <b>HTML</b>, <b>CSS</b>, <b>PHP</b> und <b>MySQL</b>  everything is possible.
                Using Databases like <b>SQLite</b>, <b>MongoDB</b> and <b>IndexedDB</b> are also no problem.
             </p>
+
+            <p>In addition, I also think, that missing knowledge can also be learned, should it be needed.</p>
         `,personalinfo_headline:"Strength & Weaknesses",personalinfo_text:`
             <h5>Strength</h5>
             <p>
@@ -411,7 +413,7 @@ import{X as w}from"./index.bae3f74a.js";function v(r){const n=r-1;return n*n*n+1
                 </li>
 
                 <li class="li-border"><a href="https://rocco-gossmann.github.io/SvelteHelloWorldTodos/" target="_blank">Svelte Todo App</a><br>
-              <small>(source code here: <a href="https://github.com/Rocco-Gossmann/SvelteHelloWorldTodos" target="_blank">https://github.com/Rocco-Gossmann/SvelteHelloWorldTodos</a>)<br><br>
+              <small>(source code here: <a href="https://github.com/Rocco-Gossmann/SvelteHelloWorldTodos" target="_blank">https://github.com/Rocco-Gossmann/SvelteHelloWorldTodos</a>)</small><br><br>
 
                   A Java-/Typescript based Todo App build in Svelte. Fully offline capable, featuring:<br>
                   - Optional encryption of offline stored data<br>
