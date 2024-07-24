@@ -1,4 +1,4 @@
-import{X as w}from"./index.bae3f74a.js";function v(n){const r=n-1;return r*r*r+1}function S(n,{delay:r=0,duration:s=400,easing:o=w}={}){const l=+getComputedStyle(n).opacity;return{delay:r,duration:s,easing:o,css:i=>`opacity: ${i*l}`}}function _(n,{delay:r=0,duration:s=400,easing:o=v,axis:l="y"}={}){const i=getComputedStyle(n),h=+i.opacity,c=l==="y"?"height":"width",u=parseFloat(i[c]),t=l==="y"?["top","bottom"]:["left","right"],a=t.map(e=>`${e[0].toUpperCase()}${e.slice(1)}`),b=parseFloat(i[`padding${a[0]}`]),m=parseFloat(i[`padding${a[1]}`]),p=parseFloat(i[`margin${a[0]}`]),g=parseFloat(i[`margin${a[1]}`]),f=parseFloat(i[`border${a[0]}Width`]),k=parseFloat(i[`border${a[1]}Width`]);return{delay:r,duration:s,easing:o,css:e=>`overflow: hidden;opacity: ${Math.min(e*20,1)*h};${c}: ${e*u}px;padding-${t[0]}: ${e*b}px;padding-${t[1]}: ${e*m}px;margin-${t[0]}: ${e*p}px;margin-${t[1]}: ${e*g}px;border-${t[0]}-width: ${e*f}px;border-${t[1]}-width: ${e*k}px;`}}const A={meta_keywords:"",menutexts:{intro:"Einleitung:",aboutme:"Über mich",hobbies:"Hobbys",strengthweaknesses:"Stärken & Schwächen",education:"Werdegang:",job:"Beruf & Erfahrung",cv:"Lebenslauf",projects:"Projekte:",misc:"Sonstiges:",tools:"Meine Werkzeuge",links:"Links",legal:"Rechtliche Hinweise"},aboutme:{whoami_headline:"Wer bin ich?",whoami_text:`
+import{X as w}from"./index.bae3f74a.js";function v(r){const n=r-1;return n*n*n+1}function S(r,{delay:n=0,duration:s=400,easing:o=w}={}){const l=+getComputedStyle(r).opacity;return{delay:n,duration:s,easing:o,css:i=>`opacity: ${i*l}`}}function P(r,{delay:n=0,duration:s=400,easing:o=v,axis:l="y"}={}){const i=getComputedStyle(r),h=+i.opacity,c=l==="y"?"height":"width",b=parseFloat(i[c]),a=l==="y"?["top","bottom"]:["left","right"],t=a.map(e=>`${e[0].toUpperCase()}${e.slice(1)}`),u=parseFloat(i[`padding${t[0]}`]),m=parseFloat(i[`padding${t[1]}`]),g=parseFloat(i[`margin${t[0]}`]),p=parseFloat(i[`margin${t[1]}`]),f=parseFloat(i[`border${t[0]}Width`]),k=parseFloat(i[`border${t[1]}Width`]);return{delay:n,duration:s,easing:o,css:e=>`overflow: hidden;opacity: ${Math.min(e*20,1)*h};${c}: ${e*b}px;padding-${a[0]}: ${e*u}px;padding-${a[1]}: ${e*m}px;margin-${a[0]}: ${e*g}px;margin-${a[1]}: ${e*p}px;border-${a[0]}-width: ${e*f}px;border-${a[1]}-width: ${e*k}px;`}}const _={meta_keywords:"",menutexts:{intro:"Einleitung:",aboutme:"Über mich",hobbies:"Hobbys",strengthweaknesses:"Stärken & Schwächen",education:"Werdegang:",job:"Beruf & Erfahrung",cv:"Lebenslauf",projects:"Projekte:",misc:"Sonstiges:",tools:"Meine Werkzeuge",links:"Private Coding Projekte",legal:"Rechtliche Hinweise"},aboutme:{whoami_headline:"Wer bin ich?",whoami_text:`
             <p>Hallo, mein Name ist Rocco, aber das habt Ihr sicher schon geahnt. Ich bin 1987 geboren und somit ${d(1987)} Jahre jung.</p>
 
             <h5> Ausserdem bin ich: </h5>
@@ -38,7 +38,7 @@ import{X as w}from"./index.bae3f74a.js";function v(n){const r=n-1;return r*r*r+1
                  <li class="li-border"> Bau und Wartung von interaktiven Anwendungen für den Livestream-Bereich via <b>Flash/ActionScript</b>
                  <li class="li-border"> Bau von interaktiven Stream-Playern für die Austrahlung im TV. </li>
                  <li class="li-border"> Sowie das dafür nötige Backend im das ausgestrahlte Programm via Telefon zu beinflussen. <br />
-                    <small>(Da diese Anwendungen zum Teil für Seiten/TV-Programme des nicht jugendfreien Bereichs waren, 
+                    <small>(Da diese Anwendungen zum Teil für Seiten/TV-Programme des nicht jugendfreien Bereichs waren,
                     werde ich hier, auf dieser öffentlich erreichbaren Seite, nicht weiter daruf eingehen. 😅)</small>
                  </li>
             </ul>
@@ -68,8 +68,8 @@ import{X as w}from"./index.bae3f74a.js";function v(n){const r=n-1;return r*r*r+1
                 Leider musste die Firma in 2020 durch die, von der Regierung ergriffenen, mit COVID-19 zusammenhängenden Maßnahmen dem Großteil ihrer Belegschaft kündigen.
             </p>
             <p>
-                Seit Dez. 2020 bin ich nun bei der GBA-Professional GmbH angestellt. Dort entwickeln und programmieren meine Kollegen und ich 
-                das Produkt <a href="https://ivm-pro.de/" target="_blank">IVM-Professional / IVMPRO</a>, 
+                Seit Dez. 2020 bin ich nun bei der GBA-Professional GmbH angestellt. Dort entwickeln und programmieren meine Kollegen und ich
+                das Produkt <a href="https://ivm-pro.de/" target="_blank">IVM-Professional / IVMPRO</a>,
                 welches Deutschlandweit als "Customer Relationship Management"(kurz CRM) - System  in der Wohnungswirtschaft zum Einsatz kommt.
             </p>
             Insgesammt gestalltet sich mein Lebenslauf wie folgt:
@@ -88,11 +88,15 @@ import{X as w}from"./index.bae3f74a.js";function v(n){const r=n-1;return r*r*r+1
                Das offensichtlichste ist dabei natürlich die Web-Entwicklung. Ohne diese würde es diese Seite hier nicht geben.</p>
 
             <p>Aber auch andere Programmiersprachen interessieren mich.<br />
-               Im Grunde ist von Assembler (6052 und z80), über C/C++, Java, Go, Lua und natürlich JavaScript/Typescript, HTML, CSS, PHP und MySQL alles möglich.</p>
+               Im Grunde ist von <b>C/C++</b>, <b>Java</b>, <b>Go/GoLang</b>, <b>Lua</b> und natürlich <b>JavaScript/Typescript</b>, <b>HTML</b>, <b>CSS</b>, <b>PHP</b> und <b>MySQL</b> alles möglich.
+               Die Verwendung von Databases wie <b>SQLite</b>, <b>MongoDB</b> und <b>IndexedDB</b> stellt ebenfalls kein Problem dar.
+            </p>
+
+            <p>Zusätzlich gehe ich immer davon aus, dass fehlendes Wissen gelernt werden kann</p>
         `,personalinfo_headline:"Stärken & Schwächen",personalinfo_text:`
             <h5>Stärken</h5>
             In der Lage zu sein jemandes Stärken zu sehen und zu nutzen ist wichtig.<br />
-            Meine Stärken sind:  
+            Meine Stärken sind:
             <ul>
                 <li class="li-border">Experimentierfreudigkeit</li>
                 <li class="li-border">Analytisches Denken</li>
@@ -114,13 +118,13 @@ import{X as w}from"./index.bae3f74a.js";function v(n){const r=n-1;return r*r*r+1
             </ul>
         `,misc_headline:"Sonstiges:",tools_headline:"Werkzeuge  mit dehnen ich erfahrung habe",tools_text:`
             Was werkzeuge angeht hat man als Programmierer natürlich eine riesen Auswahl. Die Liste hier bedeutet nicht, dass
-            ich anderen, neuen Tools gegenüber abgeneigt bin. Im Grunde ist kein Tool wirklich gut oder schlecht. 
+            ich anderen, neuen Tools gegenüber abgeneigt bin. Im Grunde ist kein Tool wirklich gut oder schlecht.
 
             <h5>Betriebssyteme</h5>
             <ul>
-                <li class="li-border">Windows</li>
+                <li class="li-border">Linux (hautsächlich Debian / Ubuntu / Linux Mint oder Fedora) </li>
                 <li class="li-border">MacOS</li>
-                <li class="li-border">bevorzugt aber eher Linux (Debian / Ubuntu / Linux Mint oder Fedora) </li>
+                <li class="li-border">Windows</li>
             </ul>
 
             <h5>IDEs / Editoren</h5>
@@ -129,15 +133,24 @@ import{X as w}from"./index.bae3f74a.js";function v(n){const r=n-1;return r*r*r+1
                 <li class="li-border"><a href="https://www.jetbrains.com/de-de/phpstorm/" target="_blank">JetBrains PHPStorm / WebStorm</a></li>
                 <li class="li-border"><a href="https://visualstudio.microsoft.com/de/" target="_blank">Visual Studio (Für C/C++ Entwicklung)</a></li>
                 <li class="li-border"><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
-                <li class="li-border">bevortzugt aber, sofern möglich <a href="https://github.com/neovim/neovim" target="_blank">NeoVim</a> + <a href="https://github.com/tmux/tmux/wiki" target="_blank">Tmux</a> mit entsprechender Konfiguration für AutoCompletion und Debugger (siehe <a href="https://github.com/Rocco-Gossmann/nvChadConfig" target="_blank">Meine Vim Konfiguration</a>)
+                <li class="li-border"><a href="https://github.com/neovim/neovim" target="_blank">NeoVim</a> + <a href="https://github.com/tmux/tmux/wiki" target="_blank">Tmux</a> mit entsprechender Konfiguration für AutoCompletion und Debugger.
+                <li class="li-border">Aktuell beforzuge ich allerdings den Editor <a href="https://zed.dev/" target="_blank">Zed</a> mit einer Vim-ähnlichen - Tastatur-konfiguration.
+            </ul>
+
+            <h5>Version-Control- / Management- / Build-Systeme</h5>
+            <ul>
+              <li class="li-border">GIT / GitHub / Bitbuket</li>
+              <li class="li-border">Jira / Confluence</li>
+              <li class="li-border">Make / Makefile</li>
             </ul>
 
             <h5>Sonstiges</h5>
             <ul>
-                <li class="li-border">GIT</li>
                 <li class="li-border">Microsoft Outlook / Office Word / Office Excel</li>
                 <li class="li-border">Thunderbird</li>
+                <li class="li-border">Microsoft Teams</li>
                 <li class="li-border">LibreOffice Writer / Calc </li>
+                <li class="li-border">Und natürlich alle arten an Web-Browsern</li>
             </ul>
 
             <h5>Hardware</h5>
@@ -149,25 +162,57 @@ import{X as w}from"./index.bae3f74a.js";function v(n){const r=n-1;return r*r*r+1
                 <li class="li-border">Raspberry PI 400 als NAS und VPN Server</li>
             </ul>
 
-        `,links_headline:"Sonstige Links",links_text:`
-            <ul>
-                <li class="li-border"><a href="https://github.com/rocco-gossmann" target="_blank">
-                    Mein GitHub
-                 </a></li>
-            </ul>
+        `,links_headline:"Meine Projekte",links_text:`
+          <ul>
+              <li class="li-border"><a href="https://github.com/Rocco-Gossmann/tnt" target="_blank">Tasks 'n Times</a><br>
+                Ein Programm, welches dazu dient nachzuverfolgen wie lange man an Projekten und Aufgaben gearbeitet hat.<br>
+                <small>(Geschrieben in Go/GoLang)</small>
+              </li>
+
+              <li class="li-border"><a href="https://github.com/Rocco-Gossmann/VSCode-CommentBookmarks" target="_blank">CommentBookmarks for VSCode</a><br>
+                Ein VisualStudioCode-Plubin, welches es erlaubt Lesezeichen/Bookmarks via Code-Kommentaren zu erstellen und zu navigieren.
+              </li>
+
+              <li class="li-border"><a href="https://github.com/Rocco-Gossmann/php-core" target="_blank">Mein PHP - Core/Utils</a><br>
+                Eine Sammlung meiner eigenen PHP-Klassen um verschiedenen Aufgaben leichter zu machen.
+              </li>
+
+              <li class="li-border"><a href="https://github.com/Rocco-Gossmann/PHP-ServiceWorkerGenerator" target="_blank">PHP Service-Worker - Generator</a><br>
+                Eine PHP-Klasse, welche eine Service-Worker zum Offline-Speichern von Dateien generieren kann.
+                (Besagter Service-Worker wird automatisch aktualisiert, wenn sich Dateien auf dem Server ändern.)
+              </li>
+
+              <li class="li-border"><a href="https://github.com/Rocco-Gossmann/RayLibTheater" target="_blank">RayLibTheater</a><br>
+                Ein C++ basiertes Framework, welches <a href="https://www.raylib.com/" target="_blank">RayLib</a> erweitert.
+                Es dient dazu den Zustand von Programmen und Entities zu managen.
+              </li>
+
+              <li class="li-border"><a href="https://rocco-gossmann.github.io/SvelteHelloWorldTodos/" target="_blank">Svelte Todo App</a><br>
+            <small>(quellcode hier: <a href="https://github.com/Rocco-Gossmann/SvelteHelloWorldTodos" target="_blank">https://github.com/Rocco-Gossmann/SvelteHelloWorldTodos</a>)<br><br>
+
+                Eine Java-/Typescript basierte Todo App, welche in Svelte gebaut wurde:
+                - Komplett offline fähig<br>
+                - Optionale Verschlüsselung der Offline gespeicherten Daten<br>
+                - Aufgaben können mit Tags organisiert werden<br>
+                - JSON In- and Export<br>
+
+              </li>
+
+          </ul>
+          <small> Mehr Projekte gibt es auf meiner <a href="https://github.com/rocco-gossmann" target="_blank"> GitHub-Seite </a></small>
         `,legal_headline:"Rechtliche Hinweise",legal_text:`
             <h5>Haftung für Links</h5>
             Diese Seite enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.
             Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
-            Links zu 
+            Links zu
 
             <h5>Urheberrecht</h5>
-            Die, durch die Seitenbetreiber erstellten, Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. 
-            Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. 
-            Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. 
-            Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. 
-            Insbesondere werden Inhalte Dritter als solche gekennzeichnet. 
-            Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. 
+            Die, durch die Seitenbetreiber erstellten, Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht.
+            Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+            Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
+            Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet.
+            Insbesondere werden Inhalte Dritter als solche gekennzeichnet.
+            Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis.
             Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
 
             <h5>Datenschutz ${"für "+window.location.href.split("#")[0]} </h5>
@@ -176,12 +221,12 @@ import{X as w}from"./index.bae3f74a.js";function v(n){const r=n-1;return r*r*r+1
             <h5>Datenschutz für github.io</h5>
             Diese Website wird auf Servern von <a href="https://www.github.com/" target="_blank">Github Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA</a> gehostet. <br />
             Beachten Sie daher auch die <a href="https://help.github.com/articles/github-privacy-policy/" target="_blank">GitHub Privacy Policy</a> und <a href="https://help.github.com/articles/global-privacy-practices/" target="_blank">GitHub Global Privacy Practices</a>.
-        `}},P={meta_keywords:"",menutexts:{intro:"Introduction:",aboutme:"About me",hobbies:"Hobbies",strengthweaknesses:"Strength & Weaknesses",education:"Career:",job:"Jobs & Experience",cv:"Curriculum vitae",projects:"Projects:",misc:"Miscellaneous:",tools:"My Tools",links:"Links",legal:"Legal notice"},aboutme:{whoami_headline:"Who am I?",whoami_text:`
+        `}},A={meta_keywords:"",menutexts:{intro:"Introduction:",aboutme:"About me",hobbies:"Hobbies",strengthweaknesses:"Strength & Weaknesses",education:"Career:",job:"Jobs & Experience",cv:"Curriculum vitae",projects:"Projects:",misc:"Miscellaneous:",tools:"My Tools",links:"Privat Coding Projects",legal:"Legal notice"},aboutme:{whoami_headline:"Who am I?",whoami_text:`
             <p>Hello, my name is Rocco, but you probably guessed as much. I was born in 1987 and thus I am ${d(1987)} years young.</p>
 
             <h5> In addition to that I am: </h5>
             <ul>
-                <li><span class="li-inline">1.83m tall</span></li> 
+                <li><span class="li-inline">1.83m tall</span></li>
                 <li><span class="li-inline">of male gender</span></li>
                 <li><span class="li-inline">single</span></li>
                 <li><span class="li-inline">introverted</li>
@@ -209,9 +254,9 @@ import{X as w}from"./index.bae3f74a.js";function v(n){const r=n-1;return r*r*r+1
                  <li class="li-border"> Maintenance and documentation of existing applications.</li>
                  <li class="li-border"> Building of <b>REST-APIs</b> with focus on security. For example through <b>AES-encryption</b> and Tokens.</li>
                  <br />
-                 <li class="li-border"> 
+                 <li class="li-border">
                     Building of automated systems for Accounting and Finance<br />
-                        (creation of invoices, offers, receipts, etc. ...) 
+                        (creation of invoices, offers, receipts, etc. ...)
                  <br />
                  <li class="li-border"> Building and maintainance of interactive applications for livestreaming via <b>Flash/ActionScript</b>
                  <li class="li-border"> Building of interactive stream players for use in TV broadcasts. </li>
@@ -246,9 +291,9 @@ import{X as w}from"./index.bae3f74a.js";function v(n){const r=n-1;return r*r*r+1
                 Unfortunately, in 2020, the company had to lay off most of its workforce due to the measures taken by the government related to COVID-19.
             </p>
             <p>
-                Since Dec. 2020 I'm now part of the der GBA-Professional GmbH in Bernau. 
+                Since Dec. 2020 I'm now part of the der GBA-Professional GmbH in Bernau.
                 There, my colleagues and I develop and maintain the product
-                <a href="https://ivm-pro.de/" target="_blank">IVM-Professional / IVMPRO</a>, 
+                <a href="https://ivm-pro.de/" target="_blank">IVM-Professional / IVMPRO</a>,
                 which is used throughout Germany as a "Customer Relationship Management"(short CRM) system for the housing market.
             </p>
             In general, my curriculum vitae looks like this:
@@ -260,14 +305,16 @@ import{X as w}from"./index.bae3f74a.js";function v(n){const r=n-1;return r*r*r+1
                 <li class="li-border"> <b> 2020 - now: </b> Programmer at the <a href="https://ivm-pro.de/" target="_blank">IVM-Professional / IVMPRO</a> in Bernau</li>
             </ul>
         `,hobbys_headline:"What do I do in my spare time?",hobbys_text:`
-            <p>In my spare time, next to any domestic duties, I like to 
+            <p>In my spare time, next to any domestic duties, I like to
                expand my knowledge about programming and software development.</p>
 
             <p>Over the years I've tackled various projects in all kinds of areas in the programming space.<br />
                The most obvious one being Web Development. Without that, this site would not exist.</p>
 
             <p>But I'm also interessted in other programming languanges too.<br />
-               Basically from  Assembler (6052 and z80), over C/C++, Java, Go, Lua and of course JavaScript/Typescript, HTML, CSS, PHP und MySQL  everything is possible.</p>
+               Basically from <b>C/C++</b>, <b>Java</b>, <b>Go/GoLang</b>, <b>Lua</b> and of course <b>JavaScript/Typescript</b>, <b>HTML</b>, <b>CSS</b>, <b>PHP</b> und <b>MySQL</b>  everything is possible.
+               Using Databases like <b>SQLite</b>, <b>MongoDB</b> and <b>IndexedDB</b> are also no problem.
+            </p>
         `,personalinfo_headline:"Strength & Weaknesses",personalinfo_text:`
             <h5>Strength</h5>
             <p>
@@ -303,7 +350,7 @@ import{X as w}from"./index.bae3f74a.js";function v(n){const r=n-1;return r*r*r+1
             <ul>
                 <li class="li-border">Windows</li>
                 <li class="li-border">Mac OS</li>
-                <li class="li-border">but more preferably Linux (Debian / Ubuntu / Linux Mint oder Fedora) </li>
+                <li class="li-border">but more preferably Linux (Debian / Ubuntu / Linux Mint or Fedora) </li>
             </ul>
 
             <h5>IDEs / Editors</h5>
@@ -312,15 +359,24 @@ import{X as w}from"./index.bae3f74a.js";function v(n){const r=n-1;return r*r*r+1
                 <li class="li-border"><a href="https://www.jetbrains.com/de-de/phpstorm/" target="_blank">JetBrains PHPStorm / WebStorm</a></li>
                 <li class="li-border"><a href="https://visualstudio.microsoft.com/de/" target="_blank">Visual Studio (for C/C++ Development)</a></li>
                 <li class="li-border"><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
-                <li class="li-border">but more preferably, if possible <a href="https://github.com/neovim/neovim" target="_blank">NeoVim</a> + <a href="https://github.com/tmux/tmux/wiki" target="_blank">Tmux</a> with their respective configuration for autocompletion and debugging (see <a href="https://github.com/Rocco-Gossmann/nvChadConfig" target="_blank">My Vim Configuration</a>)
+                <li class="li-border"><a href="https://github.com/neovim/neovim" target="_blank">NeoVim</a> + <a href="https://github.com/tmux/tmux/wiki" target="_blank">Tmux</a> with their respective configuration for autocompletion and debugging.
+                <li class="li-border">Currently I prefere the <a href="https://zed.dev/" target="_blank">Zed</a> editor with a Vim like - keyboard konfiguration.
+            </ul>
+
+            <h5>Version-Control / Build-Systems</h5>
+            <ul>
+              <li class="li-border">GIT</li>
+              <li class="li-border">Jira / Confluence</li>
+              <li class="li-border">Make / Makefile</li>
             </ul>
 
             <h5>Others</h5>
             <ul>
-                <li class="li-border">GIT</li>
                 <li class="li-border">Microsoft Outlook / Office Word / Office Excel</li>
                 <li class="li-border">Thunderbird</li>
+                <li class="li-border">Microsoft Teams</li>
                 <li class="li-border">LibreOffice Writer / Calc </li>
+                <li class="li-border">And of course all kinds of webbrowsers</li>
             </ul>
 
             <h5>Hardware</h5>
@@ -331,17 +387,46 @@ import{X as w}from"./index.bae3f74a.js";function v(n){const r=n-1;return r*r*r+1
                 <li class="li-border">Galaxy Tab S7+</li>
                 <li class="li-border">Raspberry PI 400 as a NAS and VPN Server</li>
             </ul>
-        `,links_headline:"Misc. Links",links_text:`
+        `,links_headline:"Some of my private projects",links_text:`
             <ul>
-                <li class="li-border"><a href="https://github.com/rocco-gossmann" target="_blank">
-                    my GitHub
-                 </a></li>
+                <li class="li-border"><a href="https://github.com/Rocco-Gossmann/tnt" target="_blank">Tasks 'n Times</a><br>
+                  A Go/Golang based tool to keep track of the time spend on various projects and or tasks. Featuring a CLI and Web-Interface.
+                </li>
+
+                <li class="li-border"><a href="https://github.com/Rocco-Gossmann/VSCode-CommentBookmarks" target="_blank">CommentBookmarks for VSCode</a><br>
+                  A Plugin for VSCode, that allow for creating, listing and jumping to Comment based Bookmarks in Files.
+                </li>
+
+                <li class="li-border"><a href="https://github.com/Rocco-Gossmann/php-core" target="_blank">My PHP - Core/Utils</a><br>
+                  A Collection my own PHP-classes to make certain tasks easier.
+                </li>
+
+                <li class="li-border"><a href="https://github.com/Rocco-Gossmann/PHP-ServiceWorkerGenerator" target="_blank">PHP Service-Worker - Generator</a><br>
+                  A PHP Class, that makes it possible for PHP to generate a Service-Worker for caching various files.
+                 (And also update that Service-Worker/Cache automatically if cached files change on the Server.)
+                </li>
+
+                <li class="li-border"><a href="https://github.com/Rocco-Gossmann/RayLibTheater" target="_blank">RayLibTheater</a><br>
+                  A C++ Based Framework build around <a href="https://www.raylib.com/" target="_blank">RayLib</a> to handle Application-State and Entities.
+                </li>
+
+                <li class="li-border"><a href="https://rocco-gossmann.github.io/SvelteHelloWorldTodos/" target="_blank">Svelte Todo App</a><br>
+              <small>(source code here: <a href="https://github.com/Rocco-Gossmann/SvelteHelloWorldTodos" target="_blank">https://github.com/Rocco-Gossmann/SvelteHelloWorldTodos</a>)<br><br>
+
+                  A Java-/Typescript based Todo App build in Svelte. Fully offline capable, featuring:<br>
+                  - Optional encryption of offline stored data<br>
+                  - A tagging system<br>
+                  - JSON In- and Export<br>
+
+                </li>
+
             </ul>
+            <small> More Projects can be found on my  <a href="https://github.com/rocco-gossmann" target="_blank"> GitHub-Page </a></small>
         `,legal_headline:"Legal notices",legal_text:`
             <h5>Responsibility for links</h5>
             This Page contains links to webpages, provided by independed 3rd parties. That is why we can't take responsibility for the content provided by these 3rd parties.
             A links responsibility always falls to its respective page owner. At the time of creating the links, the linked pages have been checked for their legality
-            and did not contain any illegal content.  However, a permanent control of 3rd party pages without a hint of a law violation, 
+            and did not contain any illegal content.  However, a permanent control of 3rd party pages without a hint of a law violation,
             is unreasonable. Should the links contain illegal content in the future, they will be removed as soon as this becomes known to us.
 
             <h5>Copyright</h5>
@@ -360,4 +445,4 @@ import{X as w}from"./index.bae3f74a.js";function v(n){const r=n-1;return r*r*r+1
             This page is hosted on a Server provided by <a href="https://www.github.com/" target="_blank">Github Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA</a>. <br />
             The data protection regulations defined by the server provider therefore apply.
             <a href="https://help.github.com/articles/github-privacy-policy/">GitHub Privacy Policy</a> und <a href="https://help.github.com/articles/global-privacy-practices/" target="_blank">GitHub Global Privacy Practices</a>.
-        `}};function d(n){return new Date().getFullYear()-n}export{A as d,P as e,S as f,_ as s};
+        `}};function d(r){return new Date().getFullYear()-r}export{_ as d,A as e,S as f,P as s};
