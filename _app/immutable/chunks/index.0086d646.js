@@ -15,7 +15,7 @@ import{X as w}from"./index.bae3f74a.js";function v(r){const n=r-1;return n*n*n+1
             <p>
                 Mein gelernter Beruf ist "Staatlich geprüfter Betriebswirt, mit Fachrichtung Wirtschaftsinformatik".<br />
                 Abschluss in 2010 <small>(Gefolgt von einem Anerkennungsjahr bis 2011)</small><br />
-                Allerdings lagen meine Stärke, mehr in der Informatik als in der Wirtschaft.
+                Allerdings lagen meine Stärken, mehr in der Informatik als in der Wirtschaft.
             </p>
             <p>
                 Daher bin ich seit 2011 fest als <b>Software-Entwickler und -Programmierer für Web-basierte Anwendungen</b> angestellt (oder kurz gesagt <b>Web - Entwickler</b>). <br />
