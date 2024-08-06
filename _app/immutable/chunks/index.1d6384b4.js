@@ -162,7 +162,7 @@ import{X as w}from"./index.bae3f74a.js";function v(r){const n=r-1;return n*n*n+1
                 <li class="li-border">Raspberry PI 400 als NAS und VPN Server</li>
             </ul>
 
-        `,links_headline:"Meine Projekte",links_text:`
+        `,links_headline:"Private/Hobby Projekte",links_text:`
           <ul>
               <li class="li-border"><a href="https://github.com/Rocco-Gossmann/tnt" target="_blank">Tasks 'n Times</a><br>
                 Ein Programm, welches dazu dient nachzuverfolgen wie lange man an Projekten und Aufgaben gearbeitet hat.<br>
@@ -199,7 +199,6 @@ import{X as w}from"./index.bae3f74a.js";function v(r){const n=r-1;return n*n*n+1
               </li>
 
           </ul>
-          <small> Mehr Projekte gibt es auf meiner <a href="https://github.com/rocco-gossmann" target="_blank"> GitHub-Seite </a></small>
         `,legal_headline:"Rechtliche Hinweise",legal_text:`
             <h5>Haftung für Links</h5>
             Diese Seite enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.
@@ -389,7 +388,7 @@ import{X as w}from"./index.bae3f74a.js";function v(r){const n=r-1;return n*n*n+1
                 <li class="li-border">Galaxy Tab S7+</li>
                 <li class="li-border">Raspberry PI 400 as a NAS and VPN Server</li>
             </ul>
-        `,links_headline:"Some of my private projects",links_text:`
+        `,links_headline:"Some of my private/hobby projects",links_text:`
             <ul>
                 <li class="li-border"><a href="https://github.com/Rocco-Gossmann/tnt" target="_blank">Tasks 'n Times</a><br>
                   A Go/Golang based tool to keep track of the time spend on various projects and or tasks. Featuring a CLI and Web-Interface.
@@ -423,7 +422,6 @@ import{X as w}from"./index.bae3f74a.js";function v(r){const n=r-1;return n*n*n+1
                 </li>
 
             </ul>
-            <small> More Projects can be found on my  <a href="https://github.com/rocco-gossmann" target="_blank"> GitHub-Page </a></small>
         `,legal_headline:"Legal notices",legal_text:`
             <h5>Responsibility for links</h5>
             This Page contains links to webpages, provided by independed 3rd parties. That is why we can't take responsibility for the content provided by these 3rd parties.
