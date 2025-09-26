@@ -1,4 +1,4 @@
-import{X as w}from"./index.bae3f74a.js";function v(r){const n=r-1;return n*n*n+1}function S(r,{delay:n=0,duration:s=400,easing:o=w}={}){const l=+getComputedStyle(r).opacity;return{delay:n,duration:s,easing:o,css:i=>`opacity: ${i*l}`}}function P(r,{delay:n=0,duration:s=400,easing:o=v,axis:l="y"}={}){const i=getComputedStyle(r),h=+i.opacity,c=l==="y"?"height":"width",b=parseFloat(i[c]),a=l==="y"?["top","bottom"]:["left","right"],t=a.map(e=>`${e[0].toUpperCase()}${e.slice(1)}`),u=parseFloat(i[`padding${t[0]}`]),m=parseFloat(i[`padding${t[1]}`]),g=parseFloat(i[`margin${t[0]}`]),p=parseFloat(i[`margin${t[1]}`]),f=parseFloat(i[`border${t[0]}Width`]),k=parseFloat(i[`border${t[1]}Width`]);return{delay:n,duration:s,easing:o,css:e=>`overflow: hidden;opacity: ${Math.min(e*20,1)*h};${c}: ${e*b}px;padding-${a[0]}: ${e*u}px;padding-${a[1]}: ${e*m}px;margin-${a[0]}: ${e*g}px;margin-${a[1]}: ${e*p}px;border-${a[0]}-width: ${e*f}px;border-${a[1]}-width: ${e*k}px;`}}const _={meta_keywords:"",menutexts:{intro:"Einleitung:",aboutme:"Über mich",hobbies:"Hobbys",strengthweaknesses:"Stärken & Schwächen",education:"Werdegang:",job:"Beruf & Erfahrung",cv:"Lebenslauf",projects:"Projekte:",misc:"Sonstiges:",tools:"Meine Werkzeuge",links:"Private Coding Projekte",legal:"Rechtliche Hinweise"},aboutme:{whoami_headline:"Wer bin ich?",whoami_text:`
+import{X as w}from"./index.bae3f74a.js";function v(n){const r=n-1;return r*r*r+1}function S(n,{delay:r=0,duration:s=400,easing:o=w}={}){const l=+getComputedStyle(n).opacity;return{delay:r,duration:s,easing:o,css:i=>`opacity: ${i*l}`}}function P(n,{delay:r=0,duration:s=400,easing:o=v,axis:l="y"}={}){const i=getComputedStyle(n),h=+i.opacity,c=l==="y"?"height":"width",b=parseFloat(i[c]),a=l==="y"?["top","bottom"]:["left","right"],t=a.map(e=>`${e[0].toUpperCase()}${e.slice(1)}`),u=parseFloat(i[`padding${t[0]}`]),m=parseFloat(i[`padding${t[1]}`]),g=parseFloat(i[`margin${t[0]}`]),p=parseFloat(i[`margin${t[1]}`]),f=parseFloat(i[`border${t[0]}Width`]),k=parseFloat(i[`border${t[1]}Width`]);return{delay:r,duration:s,easing:o,css:e=>`overflow: hidden;opacity: ${Math.min(e*20,1)*h};${c}: ${e*b}px;padding-${a[0]}: ${e*u}px;padding-${a[1]}: ${e*m}px;margin-${a[0]}: ${e*g}px;margin-${a[1]}: ${e*p}px;border-${a[0]}-width: ${e*f}px;border-${a[1]}-width: ${e*k}px;`}}const A={meta_keywords:"",menutexts:{intro:"Einleitung:",aboutme:"Über mich",hobbies:"Hobbys",strengthweaknesses:"Stärken & Schwächen",education:"Werdegang:",job:"Beruf & Erfahrung",cv:"Lebenslauf",projects:"Projekte:",misc:"Sonstiges:",tools:"Meine Werkzeuge",links:"Private Coding Projekte",legal:"Rechtliche Hinweise"},aboutme:{whoami_headline:"Wer bin ich?",whoami_text:`
             <p>Hallo, mein Name ist Rocco, aber das habt Ihr sicher schon geahnt. Ich bin 1987 geboren und somit ${d(1987)} Jahre jung.</p>
 
             <h5> Ausserdem bin ich: </h5>
@@ -67,18 +67,28 @@ import{X as w}from"./index.bae3f74a.js";function v(r){const n=r-1;return n*n*n+1
                 Von Aug. 2011 bis Nov. 2020 war ich fest bei der <a href="https://www.rapidcomp.de/" target="_blank">RapidComp GmbH</a> in Berlin angestellt.
                 Leider musste die Firma in 2020 durch die, von der Regierung ergriffenen, mit COVID-19 zusammenhängenden Maßnahmen dem Großteil ihrer Belegschaft kündigen.
             </p>
+
             <p>
-                Seit Dez. 2020 bin ich nun bei der GBA-Professional GmbH angestellt. Dort entwickeln und programmieren meine Kollegen und ich
-                das Produkt <a href="https://ivm-pro.de/" target="_blank">IVM-Professional / IVMPRO</a>,
-                welches Deutschlandweit als "Customer Relationship Management"(kurz CRM) - System  in der Wohnungswirtschaft zum Einsatz kommt.
+                Von Dez. 2020 bis Sep. 2024 war ich teil der GBA-Professional GmbH in Bernau. 
+				Dort half ich das Produkt <a href="https://ivm-pro.de/" target="_blank">IVM-Professional / IVMPRO</a> zu warten und weiter zu entwickeln.
+				(IVMPRO ist ein Kundenverwlatungssystem, welches in ganz Deutschland im Bereich der Wohnungswirtschaft eingesetzt wird)
             </p>
+
+            <p>
+                Seit Nov. 2024 bin ich nun Teil der Facilioo GmbH in Berlin. Wo meine Kollgen und ich, verschiedene Teile der 
+				<a href="https://facilioo.de/" target="_blank">Facilioo - Platform</a> warten und aktiv weiter entwickeln. <br />
+				Facilioo ist ein umfassendes Software-Paket für die deutsche Wohnungswirtschaft, welches neben "Customer Relationship Management"
+				auch Dokumenten-Verwaltung und ERP-Syncronisationen (via drittanbieter APIs) und native Apps für Desktop, iOS und Android anbietet.
+            </p>
+
             Insgesammt gestalltet sich mein Lebenslauf wie folgt:
             <ul>
-                <li class="li-border"> <b> 1993 - 2003: </b> Grund- + Gesamtschule </li>
-                <li class="li-border"> <b> 2005 - 2007: </b> Ausbildung zum "Staatl. gepr. Kaufmännsichen Assistent" </li>
-                <li class="li-border"> <b> 2007 - 2010: </b> Ausbildung zum "Staatl. gepr. Betriebswirt mit Fachrichtung Wirtschaftsinformatik" </li>
-                <li class="li-border"> <b> 2011 - 2020: </b> Software-Entwicker und -Programmierer bei der <a href="https://www.rapidcomp.de/" target="_blank">RapidComp GmbH</a> in Berlin</li>
-                <li class="li-border"> <b> 2020 - jetzt: </b> Programmierer bei der <a href="https://ivm-pro.de/" target="_blank">IVM-Professional / IVMPRO</a> in Bernau</li>
+                <li class="li-border"> <b> 1993 - 2003:  </b> Grund- + Gesamtschule </li>
+                <li class="li-border"> <b> 2005 - 2007:  </b> Ausbildung zum "Staatl. gepr. Kaufmännsichen Assistent" </li>
+                <li class="li-border"> <b> 2007 - 2010:  </b> Ausbildung zum "Staatl. gepr. Betriebswirt mit Fachrichtung Wirtschaftsinformatik" </li>
+                <li class="li-border"> <b> 2011 - 2020:  </b> Software-Entwicker und -Programmierer bei der <a href="https://www.rapidcomp.de/" target="_blank">RapidComp GmbH</a> in Berlin</li>
+                <li class="li-border"> <b> 2020 - 2024:  </b> Programmierer bei der <a href="https://ivm-pro.de/" target="_blank">GBA-Professional GmbH / IVMPRO</a> in Bernau</li>
+                <li class="li-border"> <b> 2024 - jetzt: </b> Software-Entwicker und Programmierer bei der <a href="https://facilioo.de/" target="_blank">Facilioo GmbH</a> in Berlin</li>
             </ul>
         `,hobbys_headline:"Was beschäftigt mich in der Freizeit?",hobbys_text:`
             <p>In meiner Freizeit, neben den üblichen häuslichen Pflichten, verbringe ich meine Zeit gern damit,
@@ -134,7 +144,6 @@ import{X as w}from"./index.bae3f74a.js";function v(r){const n=r-1;return n*n*n+1
                 <li class="li-border"><a href="https://visualstudio.microsoft.com/de/" target="_blank">Visual Studio (Für C/C++ Entwicklung)</a></li>
                 <li class="li-border"><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
                 <li class="li-border"><a href="https://github.com/neovim/neovim" target="_blank">NeoVim</a> + <a href="https://github.com/tmux/tmux/wiki" target="_blank">Tmux</a> mit entsprechender Konfiguration für AutoCompletion und Debugger.
-                <li class="li-border">Aktuell beforzuge ich allerdings den Editor <a href="https://zed.dev/" target="_blank">Zed</a> mit einer Vim-ähnlichen - Tastatur-konfiguration.
             </ul>
 
             <h5>Version-Control- / Management- / Build-Systeme</h5>
@@ -167,6 +176,11 @@ import{X as w}from"./index.bae3f74a.js";function v(r){const n=r-1;return n*n*n+1
               <li class="li-border"><a href="https://github.com/Rocco-Gossmann/tnt" target="_blank">Tasks 'n Times</a><br>
                 Ein Programm, welches dazu dient nachzuverfolgen wie lange man an Projekten und Aufgaben gearbeitet hat.<br>
                 <small>(Geschrieben in Go/GoLang)</small>
+              </li>
+
+              <li class="li-border"><a href="https://github.com/Rocco-Gossmann/nwgo-cli" target="_blank">NWGO - CLI</a><br>
+                ein Commandline-Tool, mit dessen hilfe man native Desktop-Apps basierend auf Web-Anwendungne und einem
+				Go/GoLang - Backend entwickeln kann.
               </li>
 
               <li class="li-border"><a href="https://github.com/Rocco-Gossmann/VSCode-CommentBookmarks" target="_blank">CommentBookmarks for VSCode</a><br>
@@ -220,7 +234,7 @@ import{X as w}from"./index.bae3f74a.js";function v(r){const n=r-1;return n*n*n+1
             <h5>Datenschutz für github.io</h5>
             Diese Website wird auf Servern von <a href="https://www.github.com/" target="_blank">Github Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA</a> gehostet. <br />
             Beachten Sie daher auch die <a href="https://help.github.com/articles/github-privacy-policy/" target="_blank">GitHub Privacy Policy</a> und <a href="https://help.github.com/articles/global-privacy-practices/" target="_blank">GitHub Global Privacy Practices</a>.
-        `}},A={meta_keywords:"",menutexts:{intro:"Introduction:",aboutme:"About me",hobbies:"Hobbies",strengthweaknesses:"Strength & Weaknesses",education:"Career:",job:"Jobs & Experience",cv:"Curriculum vitae",projects:"Projects:",misc:"Miscellaneous:",tools:"My Tools",links:"Privat Coding Projects",legal:"Legal notice"},aboutme:{whoami_headline:"Who am I?",whoami_text:`
+        `}},_={meta_keywords:"",menutexts:{intro:"Introduction:",aboutme:"About me",hobbies:"Hobbies",strengthweaknesses:"Strength & Weaknesses",education:"Career:",job:"Jobs & Experience",cv:"Curriculum vitae",projects:"Projects:",misc:"Miscellaneous:",tools:"My Tools",links:"Privat Coding Projects",legal:"Legal notice"},aboutme:{whoami_headline:"Who am I?",whoami_text:`
             <p>Hello, my name is Rocco, but you probably guessed as much. I was born in 1987 and thus I am ${d(1987)} years young.</p>
 
             <h5> In addition to that I am: </h5>
@@ -289,19 +303,27 @@ import{X as w}from"./index.bae3f74a.js";function v(r){const n=r-1;return n*n*n+1
                 From Aug. 2011 till Nov. 2020 I was hired by the <a href="https://www.rapidcomp.de/" target="_blank">RapidComp GmbH</a> in Berlin.<br />
                 Unfortunately, in 2020, the company had to lay off most of its workforce due to the measures taken by the government related to COVID-19.
             </p>
+
             <p>
-                Since Dec. 2020 I'm now part of the der GBA-Professional GmbH in Bernau.
-                There, my colleagues and I develop and maintain the product
-                <a href="https://ivm-pro.de/" target="_blank">IVM-Professional / IVMPRO</a>,
-                which is used throughout Germany as a "Customer Relationship Management"(short CRM) system for the housing market.
+                From Dec. 2020 till Sep. 2024 I was part of the der GBA-Professional GmbH in Bernau.
+                There, I helped develop and maintain the product <a href="https://ivm-pro.de/" target="_blank">IVM-Professional / IVMPRO</a>.
+                IVMPRO is was used throughout Germany as a "Customer Relationship Management" (short CRM) system for the housing market.
             </p>
-            In general, my curriculum vitae looks like this:
-            <ul>
+
+            <p>
+                Since Nov. 2024 I'm now part of the Facilioo GmbH in Berlin, where my colleagues and I develop and maintain various
+				parts of the Facilioo - Platform.<br />
+				Facilioo-Platform is an extensive Software-Suite for the german housing market, which handles Customer Relationship Management, Document Management,
+				and ERP - Syncronization through 3rd Party APIs and offers various native Apps for Desktop, iOS, and Android.
+            </p>
+
+            In general, my curriculum vitae looks like this: <ul>
                 <li class="li-border"> <b> 1993 - 2003: </b> School </li>
                 <li class="li-border"> <b> 2005 - 2007: </b> Education/Training for "State certified commercial assistant" </li>
                 <li class="li-border"> <b> 2007 - 2010: </b> Education/Training for "State-certified business economist specializing in business informatics" </li>
                 <li class="li-border"> <b> 2011 - 2020: </b> Software-Developer and -programmer at the <a href="https://www.rapidcomp.de/" target="_blank">RapidComp GmbH</a> in Berlin</li>
-                <li class="li-border"> <b> 2020 - now: </b> Programmer at the <a href="https://ivm-pro.de/" target="_blank">IVM-Professional / IVMPRO</a> in Bernau</li>
+                <li class="li-border"> <b> 2020 - 2024: </b> Programmer at the <a href="https://ivm-pro.de/" target="_blank">GBA-Professional GmbH / IVMPRO</a> in Bernau</li>
+                <li class="li-border"> <b> 2024 - now: </b> Software-Developer und -programmer at the <a href="https://facilioo.de/" target="_blank">Facilioo GmbH</a> in Berlin</li>
             </ul>
         `,hobbys_headline:"What do I do in my spare time?",hobbys_text:`
             <p>In my spare time, next to any domestic duties, I like to
@@ -361,7 +383,6 @@ import{X as w}from"./index.bae3f74a.js";function v(r){const n=r-1;return n*n*n+1
                 <li class="li-border"><a href="https://visualstudio.microsoft.com/de/" target="_blank">Visual Studio (for C/C++ Development)</a></li>
                 <li class="li-border"><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
                 <li class="li-border"><a href="https://github.com/neovim/neovim" target="_blank">NeoVim</a> + <a href="https://github.com/tmux/tmux/wiki" target="_blank">Tmux</a> with their respective configuration for autocompletion and debugging.
-                <li class="li-border">Currently I prefere the <a href="https://zed.dev/" target="_blank">Zed</a> editor with a Vim like - keyboard konfiguration.
             </ul>
 
             <h5>Version-Control / Build-Systems</h5>
@@ -393,6 +414,10 @@ import{X as w}from"./index.bae3f74a.js";function v(r){const n=r-1;return n*n*n+1
                 <li class="li-border"><a href="https://github.com/Rocco-Gossmann/tnt" target="_blank">Tasks 'n Times</a><br>
                   A Go/Golang based tool to keep track of the time spend on various projects and or tasks. Featuring a CLI and Web-Interface.
                 </li>
+
+				<li class="li-border"><a href="https://github.com/Rocco-Gossmann/nwgo-cli" target="_blank">NWGO - CLI</a><br>
+				  A Commandline-Util, that allows for delveoping native Desktop-Apps using a Web-Frontend and a Go/Lang Backend.
+				</li>
 
                 <li class="li-border"><a href="https://github.com/Rocco-Gossmann/VSCode-CommentBookmarks" target="_blank">CommentBookmarks for VSCode</a><br>
                   A Plugin for VSCode, that allow for creating, listing and jumping to Comment based Bookmarks in Files.
@@ -445,4 +470,4 @@ import{X as w}from"./index.bae3f74a.js";function v(r){const n=r-1;return n*n*n+1
             This page is hosted on a Server provided by <a href="https://www.github.com/" target="_blank">Github Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA</a>. <br />
             The data protection regulations defined by the server provider therefore apply.
             <a href="https://help.github.com/articles/github-privacy-policy/">GitHub Privacy Policy</a> und <a href="https://help.github.com/articles/global-privacy-practices/" target="_blank">GitHub Global Privacy Practices</a>.
-        `}};function d(r){return new Date().getFullYear()-r}export{_ as d,A as e,S as f,P as s};
+        `}};function d(n){return new Date().getFullYear()-n}export{A as d,_ as e,S as f,P as s};
